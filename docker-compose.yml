@@ -1,0 +1,13 @@
+---
+ping-pong:
+  image: briceburg/ping-pong
+  ports:
+    #- "7777:80"
+
+  environment:
+
+    # ROUTING (for nginx-proxy container)
+    #####################################
+    VIRTUAL_HOST: ssl-test.mydomain.net
+    LETSENCRYPT_HOST: ssl-test.mydomain.net
+    LETSENCRYPT_EMAIL: devops+ssl@mydomain.net
