@@ -16,9 +16,7 @@ app.locals.PORT = process.env.VIRTUAL_PORT || 80;
 // routes
 // ///////
 
-app.all('/ping', function(req, res) {
-  res.send('pong');
-});
+require('./routes.js')(app);
 
 // runtime
 // ////////
