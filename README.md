@@ -30,7 +30,7 @@ Here's an example v1 `docker-compose.yml` assuming nginx-proxy + letsencrypt com
 ---
 ping-pong:
   image: briceburg/ping-pong
-  ports:
+  #ports:
     #- "7777:80"
 
   environment:

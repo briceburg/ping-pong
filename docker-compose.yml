@@ -1,7 +1,7 @@
 ---
 ping-pong:
   image: briceburg/ping-pong
-  ports:
+  #ports:
     #- "7777:80"
 
   environment:
