@@ -1,0 +1,6 @@
+FROM briceburg/ping-pong
+
+# example Dockerfile providing custom routes by overriding /app/routes.js
+#  in this case we respond to /ping with 204 (No-Content)
+
+COPY custom-routes.js /app/routes.js

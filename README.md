@@ -45,3 +45,27 @@ ping-pong:
 ```sh
 docker-compose up
 ```
+
+## custom route handlers
+
+As a convenience, the Express routes have been abstracted to an include file.
+This allows you to build an image based on briceburg/ping-pong with custom
+behavior. Here, we build an image based
+on the provided [Dockerfile](custom-Dockerfile) and [routefile](custom-routes.js) examples.
+
+```sh
+cd /path/to/ping-pong repo
+
+docker build -t custom-ping-pong -f custom-Dockerfile .
+docker run -it --rm -p 7777:80 custom-ping-pong
+```
+
+&& viola! a 204 is returned.
+
+```sh
+~ curl -I localhost:7777
+HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Tue, 05 Jul 2016 21:05:05 GMT
+Connection: keep-alive
+```
